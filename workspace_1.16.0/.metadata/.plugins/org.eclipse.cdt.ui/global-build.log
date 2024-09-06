@@ -1,0 +1,21 @@
+20:26:25 **** Incremental Build of configuration Debug for project 111 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc -o "111.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\LINC04\STM32CubeIDE\workspace_1.16.0\111\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="111.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 111.elf
+ 
+arm-none-eabi-size  111.elf 
+arm-none-eabi-objdump -h -S 111.elf  > "111.list"
+   text	   data	    bss	    dec	    hex	filename
+  15752	     16	   1832	  17600	   44c0	111.elf
+Finished building: default.size.stdout
+ 
+Finished building: 111.list
+ 
+20:26:32 **** Incremental Build of configuration Debug for project 111 ****
+make -j8 all 
+arm-none-eabi-size  111.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15752	     16	   1832	  17600	   44c0	111.elf
+Finished building: default.size.stdout
+ 
